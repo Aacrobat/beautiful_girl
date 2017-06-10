@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //先看使用者是否登录是否有权限留言
 session_start(); //开始记录
 //empty($_SESSION['username'])
@@ -34,10 +34,10 @@ if($con->query("SET NAMES utf8")){
 */
 $link=sqls();
 function sqls(){
-$link = mysql_connect('localhost', 'root', '123')
+$link = mysql_connect('bdm288172329.my3w.com', 'bdm288172329', 'zhj88280')
 or die('Could not connect: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('user') or die('er'.mysql_error());
+mysql_select_db('bdm288172329_db') or die('er'.mysql_error());
 mysql_query("set names 'utf8'",$link);
 return $link;
 }
@@ -51,9 +51,11 @@ $sql="insert into marktable(title,author,message) values('$title','$author','$me
 
 if(mysql_query($sql)){
     echo "<script>alert('留言成功')</script>";
+ echo "<meta http-equiv=refresh content='0; url=index.html'>";
 }
 else {
     echo "<script>alert('留言失败')</script>";
+ echo "<meta http-equiv=refresh content='0; url=index.html'>";
 }
 //echo "<meta http-equiv=refresh content='0; url=index.html'>";
 exit();

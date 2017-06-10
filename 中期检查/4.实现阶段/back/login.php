@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 //error_reporting(E_ALL & ~E_NOTICE);
 error_reporting(E_ALL || ~E_NOTICE);
@@ -37,7 +37,7 @@ if($ress[name]){
     //echo '点击此处 <a href="login.php?action=logout">注销</a> 登录！<br />';
      //mysql_query("UPDATE `hostinfo` SET `lastintime`= time() WHERE name='$username'");
      $timelast=time();
-     echo date('Y-m-d H:i:s',$timelast);
+    // echo date('Y-m-d H:i:s',$timelast);
      $stringtime = date('Y-m-d H:i:s',$timelast);
      mysql_query("UPDATE `hostinfo` SET `lastintime`= $stringtime WHERE name='$username'");
     echo "<meta  url=userman.php>";
@@ -58,10 +58,10 @@ if($ress[name]){
 }
 
 function sqls(){
-$link = mysql_connect('localhost', 'root', '123')
+$link = mysql_connect('bdm288172329.my3w.com', 'bdm288172329', 'zhj88280')
 or die('Could not connect: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('user') or die('er'.mysql_error());
+mysql_select_db('bdm288172329_db') or die('er'.mysql_error());
 mysql_query("set names 'utf8'",$link);
 return $link;
 }

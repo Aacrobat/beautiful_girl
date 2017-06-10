@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+<?php session_start(); ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -36,15 +37,15 @@
 <body class="home">
 
   <!--数据库调用-->
-  <?php
-session_start();
+<?php
+//session_start();
 error_reporting(E_ALL || ~E_NOTICE);
 $link=sqls();
 function sqls(){
-$link = mysql_connect('localhost', 'root', '123')
+$link = mysql_connect('bdm288172329.my3w.com', 'bdm288172329', 'zhj88280')
 or die('Could not connect: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('user') or die('er'.mysql_error());
+mysql_select_db('bdm288172329_db') or die('er'.mysql_error());
 mysql_query("set names 'utf8'",$link);
 return $link;
 }

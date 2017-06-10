@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 error_reporting(E_ALL || ~E_NOTICE);
 
@@ -22,10 +22,10 @@ if(strlen($password) < 6){
 //}
 //包含数据库连接文件
 function sqls(){
-$link = mysql_connect('localhost', 'root', '123')
+$link = mysql_connect('bdm288172329.my3w.com', 'bdm288172329', 'zhj88280')
 or die('Could not connect: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('user') or die('er'.mysql_error());
+mysql_select_db('bdm288172329_db') or die('er'.mysql_error());
 mysql_query("set names 'utf8'",$link);
 return $link;
 }

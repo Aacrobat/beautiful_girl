@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="templatemo">
 
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+    
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/templatemo-style.css" rel="stylesheet">
@@ -54,7 +54,7 @@
         </div>
         <nav class="templatemo-left-nav">
           <ul>
-            <li><a href="/per/personalwebpage_1.0.html"><i class="fa fa-home fa-fw"></i>回到主页</a></li>
+            <li><a href="/pageone.html"><i class="fa fa-home fa-fw"></i>回到主页</a></li>
 
             <li><a href="#" class="active"><i class="fa fa-database fa-fw"></i>留言管理</a></li>
             <li><a href="userman.php"><i class="fa fa-map-marker fa-fw"></i>用户管理</a></li>
@@ -100,10 +100,10 @@ if (empty($_SESSION['username'])) {
 }
 $link=sqls();
 function sqls(){
-$link = mysql_connect('localhost', 'root', '123')
+$link = mysql_connect('bdm288172329.my3w.com', 'bdm288172329', 'zhj88280')
 or die('Could not connect: ' . mysql_error());
 //echo 'Connected successfully';
-mysql_select_db('user') or die('er'.mysql_error());
+mysql_select_db('bdm288172329_db') or die('er'.mysql_error());
 mysql_query("set names 'utf8'",$link);
 return $link;
 }
